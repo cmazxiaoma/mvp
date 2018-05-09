@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mvp</string>
+    <string name="home">首页</string>
+    <string name="video">视频</string>
+    <string name="photo">图片</string>
+    <string name="save_photo">保存到本地</string>
+    <string name="set_wallpaper">设置壁纸</string>
+</resources>

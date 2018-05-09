@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/f_video_three_updateNotice"
+        android:background="@color/wheat"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@color/transparent"
+            android:layout_marginStart="5.5dp"
+            android:textSize="16sp"
+            android:textColor="@color/ic_red"
+            android:text="又发现了10条新内容"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/f_video_three_swipefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ListView
+            android:layout_weight="1"
+            android:id="@+id/f_video_three_listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

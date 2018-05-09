@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">mvp</string>
+    <string name="save_photo">保存到本地</string>
+    <string name="set_wallpaper">设置壁纸</string>
 </resources>

@@ -2,9 +2,6 @@ package com.cmazxiaoma.mvp.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-
-import com.cmazxiaoma.mvp.presenter.BasePresenter;
 
 /**
  * Description: 沉梦昂志
@@ -12,7 +9,7 @@ import com.cmazxiaoma.mvp.presenter.BasePresenter;
  * Author: xiaoma
  */
 
-public abstract class BaseMvpActivity<V,P extends BasePresenter<V>> extends AppCompatActivity{
+public abstract class BaseMvpActivity<V,P extends BasePresenter<V>> extends BaseOrdinaryActivity{
     private P mPresenter;
 
     @Override
@@ -21,6 +18,7 @@ public abstract class BaseMvpActivity<V,P extends BasePresenter<V>> extends AppC
         mPresenter=createPresenter();//创建Presener;
         mPresenter.attachView((V)this); //关联view
     }
+
 
     @Override
     protected void onDestroy() {

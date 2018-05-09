@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/f_news_tablayout"
+        app:tl_textsize="15sp"
+        android:background="@color/white"
+        app:tl_indicator_gravity="BOTTOM"
+        app:tl_indicator_color="@color/salmon"
+        app:tl_textSelectColor="@color/salmon"
+        app:tl_textUnselectColor="@color/list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+    </com.flyco.tablayout.SlidingTabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/f_news_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

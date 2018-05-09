@@ -1,4 +1,4 @@
-package com.cmazxiaoma.mvp.presenter;
+package com.cmazxiaoma.mvp.base;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
@@ -9,7 +9,7 @@ import io.reactivex.disposables.Disposable;
  * Author: xiaoma
  */
 
-public abstract class  BasePresenter<V>{
+public abstract class BasePresenter<V>{
     public V mView;
     private final CompositeDisposable compositeDisposable=new CompositeDisposable();
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_news_three_title"
+            android:lines="2"
+            android:textSize="22sp"
+            android:text="小马是最棒的，沉梦昂志"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:scaleType="center"
+                android:layout_weight="0.33"
+                android:id="@+id/item_news_three_img1"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:scaleType="center"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.33"
+                android:id="@+id/item_news_three_img2"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:scaleType="center"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.33"
+                android:id="@+id/item_news_three_img3"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/item_news_three_author"
+            android:text="cmaz点评 了"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="5dp"
+        android:background="#f1f1f1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

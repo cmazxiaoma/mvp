@@ -10,6 +10,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
     buildTypes {
         release {
@@ -18,6 +22,13 @@ android {
         }
     }
 
+    //svg 兼容矢量库
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES.txt'
         exclude 'META-INF/NOTICE'
@@ -34,7 +45,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -44,12 +55,13 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     //适配器
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     //Rxjava,Rxandroid
-    compile  'io.reactivex.rxjava2:rxjava:2.0.8'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.8'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     //rxbinding
     compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
@@ -58,5 +70,21 @@ dependencies {
     compile 'com.jakewharton.rxbinding2:rxbinding-design:2.0.0'
     compile 'com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:2.0.0'
     compile 'lib.gorden.rxbus2:rxbus:2.0.1'
-    compile'org.greenrobot:eventbus:3.0.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile 'com.lzy.widget:view-core:0.1.5'
+    //仿微信
+    compile 'com.yinglan.alphatabs:library:1.0.6'
+    //仿微信 有角标
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.android.support:cardview-v7:25.0.+'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    //腾讯bugly
+    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    //悬浮button
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    //节操播放器
+    compile 'com.github.open-android:JieCaoVideoPlayer:0.1.0'
 }

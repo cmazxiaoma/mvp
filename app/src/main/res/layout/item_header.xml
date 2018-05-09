@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="#f1f1f1"
+        android:id="@+id/item_header_lin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_header_img"
+            android:src="@drawable/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/item_header_button"
+            android:background="@color/transparent"
+            android:layout_marginStart="5.5dp"
+            android:textSize="16sp"
+            android:textColor="@color/ic_red"
+            android:text="刚刚看到这里,点击刷新"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</LinearLayout>
